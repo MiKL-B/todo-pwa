@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,8 +9,8 @@
     initial-scale=1.0,
     maximum-scale=1.0, minimum-scale=1.0"
     />
+    <link rel="icon" href="<%= BASE_URL %>todologo.png" />
     <meta name="theme-color" content="#2D3C4B" />
-    <link rel="icon" type="image/png" href="todologo.png" />
     <!--police écriture-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +18,16 @@
       href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
-    <title>Todo-list-pwa</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
